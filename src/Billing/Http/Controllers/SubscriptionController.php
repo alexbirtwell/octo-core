@@ -4,7 +4,7 @@ namespace Octo\Billing\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use OctoBilling\OctoBilling;
-use OctoBilling\Contracts\HandleSubscriptions;
+use OctoBilling\Actions\HandleSubscriptions;
 use OctoBilling\Saas;
 
 class SubscriptionController extends Controller
@@ -22,7 +22,7 @@ class SubscriptionController extends Controller
     /**
      * Redirect the user to subscribe to the plan.
      *
-     * @param  \OctoBilling\Contracts\HandleSubscriptions  $manager
+     * @param  \OctoBilling\Actions\HandleSubscriptions  $manager
      * @param  string  $planId
      * @return \Illuminate\Http\Response
      */
