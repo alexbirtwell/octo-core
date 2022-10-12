@@ -30,15 +30,7 @@ class BillingServiceProvider extends ServiceProvider
 
         OctoBilling::handleSubscriptionsUsing(HandleSubscriptions::class);
 
-        Saas::currency('BRL');
-
-        Saas::plan('Free', config('octo.free-plan-price-id', null))
-            ->monthly(0)
-            ->features([
-                Saas::feature('1 Team', 'teams', 1, Team::class)->notResettable(),
-                Saas::feature('50 Contacts', 'contacts', 50, Contact::class)->notResettable(),
-            ]);
-
+       
         // You can register your own plans like this:
 
         /*  Saas::plan('Free', '')
