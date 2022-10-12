@@ -22,7 +22,7 @@ class SubscriptionController extends Controller
     /**
      * Redirect the user to subscribe to the plan.
      *
-     * @param  \Octo\Billing\Contracts\HandleSubscriptions  $manager
+     * @param  \OctoBilling\Contracts\HandleSubscriptions  $manager
      * @param  string  $planId
      * @return \Illuminate\Http\Response
      */
